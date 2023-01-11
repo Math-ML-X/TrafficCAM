@@ -1,0 +1,17 @@
+@misc{httpsdoi.org10.48550arxiv.2211.09620,
+  doi = {10.48550ARXIV.2211.09620},
+  
+  url = {httpsarxiv.orgabs2211.09620},
+  
+  author = {Deng, Zhongying and Cheng, Yanqi and Liu, Lihao and Wang, Shujun and Ke, Rihuan and Schonlieb, Carola-Bibiane and Aviles-Rivero, Angelica I},
+  
+  keywords = {Computer Vision and Pattern Recognition (cs.CV), FOS Computer and information sciences, FOS Computer and information sciences},
+  
+  title = {TrafficCAM A Versatile Dataset for Traffic Flow Segmentation},
+  
+  publisher = {arXiv},
+  
+  year = {2022},
+  
+  copyright = {arXiv.org perpetual, non-exclusive license}
+}
