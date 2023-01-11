@@ -1,0 +1,332 @@
+<script src="http://www.google.com/jsapi" type="text/javascript"></script> 
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+
+<style type="text/css">
+	body {
+		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+		font-weight:300;
+		font-size:18px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 1200px;
+	}
+	
+	h1 {
+		font-size:32px;
+		font-weight:300;
+	}
+	
+	.disclaimerbox {
+		background-color: #eee;		
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+		padding: 20px;
+	}
+
+	video.header-vid {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	img.header-img {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	img.rounded {
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	a:link,a:visited
+	{
+		color: #1367a7;
+		text-decoration: none;
+	}
+	a:hover {
+		color: #208799;
+	}
+	
+	td.dl-link {
+		height: 160px;
+		text-align: center;
+		font-size: 22px;
+	}
+	
+	.layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		5px 5px 0 0px #fff, /* The second layer */
+		5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		10px 10px 0 0px #fff, /* The third layer */
+		10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
+		15px 15px 0 0px #fff, /* The fourth layer */
+		15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
+		20px 20px 0 0px #fff, /* The fifth layer */
+		20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
+		25px 25px 0 0px #fff, /* The fifth layer */
+		25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+	.paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35); /* The top layer shadow */
+
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+
+	.layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		5px 5px 0 0px #fff, /* The second layer */
+		5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		10px 10px 0 0px #fff, /* The third layer */
+		10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+		margin-top: 5px;
+		margin-left: 10px;
+		margin-right: 30px;
+		margin-bottom: 5px;
+	}
+	
+	.vert-cent {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	
+	hr
+	{
+		border: 0;
+		height: 1px;
+		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+	}
+</style>
+
+<html>
+<head>
+	<title>TrafficCAM: A Versatile Dataset for Traffic Flow Segmentation</title>
+	<meta property="og:image" content="./resources/DatasetOverview.png"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
+	<meta property="og:title" content="TrafficCAM: A Versatile Dataset for Traffic Flow Segmentation" />
+	<meta property="og:description" content="Paper description." />
+
+	<!-- Get from Google Analytics -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src=""></script> 
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-75863369-6');
+	</script>
+</head>
+
+<body>
+	<br>
+	<center>
+		<span style="font-size:32px">TrafficCAM: A Versatile Dataset for Traffic Flow Segmentation</span>
+		<br>
+		<br>
+		<table align=center width=1100px>
+			<table align=center width=1100px>
+				<tr>
+					<td align=center width=160px>
+						<center>
+							<span style="font-size:18px"><a href="https://zhongying-deng.github.io/">Zhongying Deng</a><sup>1</sup></span>
+						</center>
+					</td>
+					<td align=center width=136px>
+						<center>
+							<span style="font-size:18px">Yanqi Cheng<sup>1</sup></span>
+						</center>
+					</td>
+					<td align=center width=136px>
+						<center>
+							<span style="font-size:18px"><a href="https://lihaoliu-cambridge.github.io/">Lihao Liu</a><sup>1</sup></span>
+						</center>
+					</td>
+					<td align=center width=136px>
+						<center>
+							<span style="font-size:18px"><a href="https://emma-sjwang.github.io/">Shujun Wang</a><sup>1</sup></span>
+						</center>
+					</td>
+					<td align=center width=136px>
+						<center>
+							<span style="font-size:18px">Rihuan Ke</a><sup>1</sup></span>
+						</center>
+					</td>
+					<td align=center width=250px>
+						<center>
+							<span style="font-size:18px"><a href="https://www.damtp.cam.ac.uk/user/cbs31/Home.html">Carola-Bibiane Schönlieb</a><sup>1</sup></span>
+						</center>
+					</td>
+					<td align=center width=250px>
+						<center>
+							<span style="font-size:18px"><a href="https://angelicaiaviles.wordpress.com/">Angelica I. Aviles-Rivero</a><sup>1</sup></span>
+						</center>
+					</td>
+				</tr>
+			</table>
+			<table align=center width=600px>
+				<tr>
+					<td align=center width=600px>
+						<center>
+							<span style="font-size:22px"><sup>1</sup>DAMTP, University of Cambridge</span><br/>
+							<br>
+							<img width="300" src="./resources/logos.png" alt="affiliations">
+						</center>
+					</td>
+				</tr>
+			</table>
+			<br>
+			<table align=center width=800px>
+				<tr>
+					<td align=center width=200px>
+						<center>
+							<span style="font-size:24px"><a href='https://arxiv.org/abs/2211.09620v1'>[Paper]</a></span>
+						</center>
+					</td>
+					<td align=center width=190px>
+						<center>
+							<span style="font-size:24px"><a href=''>[Dataset]</a></span><br>
+						</center>
+					</td>
+				</tr>
+			</table>
+		</table>
+	</center>
+
+	<center>
+		<table align=center width=850px>
+			<tr>
+				<td width=560px>
+					<center>
+						<img class="round" style="width:950px" src="./resources/DatasetOverview.png" alt="The image provides a quick visualisation of the image with annotations in the dataset."/>
+					</center>
+				</td>
+			</tr>
+		</table>
+		<table align=center width=950px>
+			<tr>
+				<td>
+					This is a website made for <a href='https://arxiv.org/abs/2211.09620v1'>TrafficCAM: A Versatile Dataset for Traffic Flow Segmentation</a>. The benchmark dataset-TrafficCAM will be released soon.
+				</td>
+			</tr>
+		</table>
+	</center>
+
+	<hr>
+
+	<table align=center width=900px>
+		<center><h1>Abstract</h1></center>
+		<tr>
+			<td>
+				Traffic flow analysis is revolutionising traffic management. Qualifying traffic flow data, traffic control bureaus could provide drivers with real-time alerts, advising the fastest routes and therefore optimising transportation logistics and reducing congestion. The existing traffic flow datasets have two major limitations. They feature a limited number of classes, usually limited to one type of vehicle, and the scarcity of unlabelled data. In this paper, we introduce a new benchmark traffic flow image dataset called TrafficCAM. Our dataset distinguishes itself by two major highlights. Firstly, TrafficCAM provides both pixel-level and instance-level semantic labelling along with a large range of types of vehicles and pedestrians. It is composed of a large and diverse set of video sequences recorded in streets from eight Indian cities with stationary cameras. Secondly, TrafficCAM aims to establish a new benchmark for developing fully-supervised tasks, and importantly, semi-supervised learning techniques. It is the first dataset that provides a vast amount of unlabelled data, helping to better capture traffic flow qualification under a low cost annotation requirement. More precisely, our dataset has 4,402 image frames with semantic and instance annotations along with 59,944 unlabelled image frames. We validate our new dataset through a large and comprehensive range of experiments on several state-of-the-art approaches under four different settings: fully-supervised semantic and instance segmentation, and semi-supervised semantic and instance segmentation tasks. 
+			</td>
+		</tr>
+	</table>
+	<br>
+
+	<hr>
+	<center><h1>Demo</h1></center>
+	<p align="center">
+		<iframe width="960" height="540" src="./resources/TrafficCAM.mp4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen align="center" alt="The video shows the visualisation of some image example with annotation masks chosen from the dataset-TrafficCAM, passing through the model with backbones DenseNet-121 and Swin-T on Rendezvous baseline respectively. We present human-like comparison via Class Activation Map (CAM); top 15 percent of relevant features been extracted by the backbones; and the robustness of image while attacking the top relevant features been selected by the models."></iframe>
+	</p>
+
+
+	<hr>
+
+	<center><h1>Dataset Description</h1></center>
+	<br>
+	<br>
+	<table align=center width=920px>
+		<center>
+			<tr>
+				<td>
+				</td>
+			</tr>
+		</center>
+	</table>
+	<table align=center width=900px>
+		<tr>
+			<td align=center width=900px>
+				<center>
+					<td><img class="round" style="width:900px" src="./resources/DatasetDescription.png"/></td>
+				</center>
+			</td>
+		</tr>
+	</table>
+	<table align=center width=920px>
+		<center>
+			<tr>
+				<td>
+					 (a) Geographic distribution of TrafficCAM collection.<br>
+					 (b) Correlation analysis.<br>
+					 (c) Dataset statistics regarding complexity: the frequency of images with a fixed number of annotated object instances per image.<br>
+					 (d) Illustration of number of images per category.
+				</td>
+			</tr>
+		</center>
+	</table>
+	<br>
+	<hr>
+	<table align=center width=800px>
+		<center><h1>Paper and Supplementary Material</h1></center>
+		<tr>
+			<td><a href="https://arxiv.org/abs/2211.09620v1"><img class="layered-paper-big" style="height:175px" src="./resources/paper.png"/></a></td>
+			<td><span style="font-size:14pt"><br>Zhongying Deng, Yanqi Cheng, Lihao Liu, Shujun Wang, Rihuan Ke, Carola-Bibiane Schönlieb and Angelica I. Aviles-Rivero.<br>
+				<b>TrafficCAM: A Versatile Dataset for Traffic Flow Segmentation</b><br>
+				(hosted on <a href="https://arxiv.org/abs/2211.09620v1">ArXiv</a>)<br>
+				<!-- (<a href="./resources/camera-ready.pdf">camera ready</a>)<br> -->
+				<span style="font-size:4pt"><a href=""><br></a>
+				</span>
+			</td>
+		</tr>
+	</table>
+	<br>
+
+	<table align=center width=600px>
+		<tr>
+			<td><span style="font-size:14pt"><center>
+				<a href="./resources/bibtex.txt">[Bibtex]</a>
+			</center></td>
+		</tr>
+	</table>
+
+	<hr>
+	<br>
+
+	<table align=center width=920px>
+		<tr>
+			<td width=420px>
+				<left>
+					<center><h1>Acknowledgements</h1></center>
+					ZD, AIAR and CBS acknowledge support from the EPSRC grant EP/T003553/1. 
+YC and AIAR greatly acknowledge support from a C2D3 Early Career Research Seed Fund and CMIH EP/T017961/1, University of Cambridge. 
+LL gratefully acknowledges the financial support from a GSK scholarship and a Girton College Graduate
+Research Fellowship at the University of Cambridge. AIAR acknowledges support from CMIH and CCIMI,
+University of Cambridge. 
+CBS acknowledges support from the Philip Leverhulme Prize, the Royal Society Wolfson Fellowship, the EPSRC advanced career fellowship EP/V029428/1, EPSRC grants EP/S026045/1 and EP/T003553/1, EP/N014588/1, EP/T017961/1, the Wellcome Innovator Awards 215733/Z/19/Z and 221633/Z/20/Z, the European Union Horizon 2020 research and innovation programme under the Marie Skodowska-Curie grant agreement No. 777826 NoMADS, the Cantab Capital Institute for the Mathematics of Information and the Alan Turing Institute. 
+The authors also greatly acknowledge KritiKal and Christina Runkel for their insightful discussion.
+				</left>
+			</td>
+		</tr>
+	</table>
+
+<br>
+</body>
+</html>
