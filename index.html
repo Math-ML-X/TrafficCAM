@@ -114,6 +114,11 @@
 		height: 1px;
 		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 	}
+
+	.responsive-video {
+    width: 100%;
+    height: auto;
+  	}
 </style>
 
 <html>
@@ -244,7 +249,11 @@
 	<hr>
 	<center><h1>Demo</h1></center>
 	<p align="center">
-		<iframe width="960" height="540" src="./resources/TrafficCAM.mp4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen align="center" alt="The video shows the visualisation of some image example with annotation masks chosen from the dataset-TrafficCAM, passing through the model with backbones DenseNet-121 and Swin-T on Rendezvous baseline respectively. We present human-like comparison via Class Activation Map (CAM); top 15 percent of relevant features been extracted by the backbones; and the robustness of image while attacking the top relevant features been selected by the models."></iframe>
+		<!-- <iframe width="960" height="540" src="./resources/TrafficCAM.mp4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen align="center" alt="The video shows the visualisation of some examples in TrafficCAM."></iframe> -->
+		<video class="responsive-video" controls controlsList="nodownload" preload="metadata">
+			<source src="./resources/TrafficCAM.mp4" type="video/mp4">
+			The video shows the visualisation of some examples in TrafficCAM.
+		  </video>
 	</p>
 
 
