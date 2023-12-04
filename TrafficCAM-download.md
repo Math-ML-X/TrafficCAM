@@ -113,7 +113,7 @@ wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download
 unzip splits.zip
 ```
 
-### Delete all prepreation files
+### Delete all preparation files
 ```
 rm raw/*.zip
 rm -r raw/*-*
