@@ -70,7 +70,7 @@ FirstFrame_annotate-3.zip https://drive.google.com/file/d/1cKOpDQ-NvqTxIETXYcDOv
 
 
 ## The benchmarked split in semi-supervised training can be found in:
-splits.zip https://drive.google.com/drive/folders/1O7Ch2Wg09jXuIiISOACYYDnL-sHdT635?usp=sharing
+splits.zip https://drive.google.com/file/d/1GcQ3J56kU-6TwRqRjzvI28-OF6QUdHeR/view?usp=sharing
 
 
 ## Instruction for downloading and assembling the data as benchmarked is as below through commend lines:
