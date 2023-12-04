@@ -10,7 +10,7 @@ FirstFrame_annotate-2.zip https://drive.google.com/file/d/1TmN07tdC5NYpcIPI5tmhO
 Partition 3:   
 FirstFrame_annotate-3.zip https://drive.google.com/file/d/1cKOpDQ-NvqTxIETXYcDOv_Ojc3UZm2Qq/view?usp=sharing
 
-## The data tree for using the dataset as suggested in benchmark can be viewed below:
+## The data structure for using the dataset as suggested in benchmark can be viewed below:
       ├── TrafficCAM
         ├── raw
           ├── FirstFrame_annotate
