@@ -103,7 +103,7 @@ unzip Fully_annotate.zip
 ### Assemble the first frame annotated data:
 ```
 mkdir FirstFrame_annotate
-mv -r FirstFrame_annotate-1/* FirstFrame_annotate-2/* FirstFrame_annotate-3/* FirstFrame_annotate/
+mv FirstFrame_annotate-1/* FirstFrame_annotate-2/* FirstFrame_annotate-3/* FirstFrame_annotate/
 ```
 
 ### Download the benchmarked splits
@@ -116,6 +116,7 @@ unzip splits.zip
 ### Delete all prepreation files
 ```
 rm raw/*.zip
+rm -r raw/*-*
 rm *.zip
 rm -r __MACOSX
 ```
